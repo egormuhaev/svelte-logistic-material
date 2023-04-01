@@ -191,7 +191,9 @@
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
-    color: #79D196;
+    color: #79d196;
+
+    border: none;
 
     margin-bottom: 35px;
   }
@@ -229,7 +231,7 @@
     width: 169px;
     height: 51px;
 
-    background: #79D196;
+    background: #79d196;
     border-radius: 4px;
 
     color: white;
