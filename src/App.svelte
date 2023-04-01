@@ -2,12 +2,19 @@
   import Header from "./components/Header/Header.svelte";
   import CreateBuildingSite from "./components/CreateBuildingSite/CreateBuildingSite.svelte";
   import CreateProviders from "./components/CreateProviders/CreateProviders.svelte";
+  import { Router, Route } from "svelte-navigator";
 </script>
 
 <main class="wrapper">
-  <Header />
-  <CreateProviders />
-  <!-- <CreateBuildingSite /> -->
+  <Router>
+    <Header />
+    <Route>
+      <CreateBuildingSite />
+    </Route>
+    <Route path="create-providers">
+      <CreateProviders />
+    </Route>
+  </Router>
 </main>
 
 <style>

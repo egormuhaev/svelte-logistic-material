@@ -1,6 +1,7 @@
 import { createProvidersState } from "../store";
 import { config } from '../../config/config';
 import axios from "axios";
+import {v4} from "uuid";
 
 // Helpers
 const toString = (val) => {
@@ -169,6 +170,7 @@ const addNewProvider = async () => {
     
     createProvidersState.update((value) => {
         const providerItem = {
+            id: v4(),
             position,
             adress,
             orgInfo,
@@ -183,6 +185,16 @@ const addNewProvider = async () => {
     }
 }
 
+const dellProvider = (id) => {
+    createProvidersState.update((value) => {
+        const newProviderList = value.providers.filter(prov => prov.id != id)
+        return {
+            ...value,
+            providers: [...newProviderList],
+        }
+    })
+}
+
 
 
 export {
@@ -192,5 +204,6 @@ export {
     setOrgInfoName, 
     setContectTel, 
     setContectEmail, 
-    addNewProvider
+    addNewProvider,
+    dellProvider
 } 
