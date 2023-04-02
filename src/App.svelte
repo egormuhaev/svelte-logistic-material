@@ -2,6 +2,7 @@
   import Header from "./components/Header/Header.svelte";
   import CreateBuildingSite from "./components/CreateBuildingSite/CreateBuildingSite.svelte";
   import CreateProviders from "./components/CreateProviders/CreateProviders.svelte";
+  import CreateTransportationParameters from "./components/CreateTransportationParameters/CreateTransportationParameters.svelte";
   import { Router, Route } from "svelte-navigator";
 </script>
 
@@ -11,9 +12,11 @@
     <Route>
       <CreateBuildingSite />
     </Route>
-    <Route path="create-providers">
-      <CreateProviders />
-    </Route>
+    <Route path="create-providers" component={CreateProviders} />
+    <Route
+      path="create-transportation-parameters"
+      component={CreateTransportationParameters}
+    />
   </Router>
 </main>
 

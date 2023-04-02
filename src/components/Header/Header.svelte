@@ -4,10 +4,13 @@
 
 <div class="header">
   <Link to="/">
-    <button class="btn-nav">Строительная площадки</button>
+    <div class="btn-nav">Строительная площадки</div>
   </Link>
   <Link to="/create-providers">
-    <button class="btn-nav">Поставщики</button>
+    <div class="btn-nav">Поставщики</div>
+  </Link>
+  <Link to="/create-transportation-parameters">
+    <div class="btn-nav">Параметры транспортировки</div>
   </Link>
 </div>
 
@@ -22,7 +25,7 @@
     width: auto;
 
     background-color: #fff;
-    
+
     color: #79d196;
 
     font-weight: bold;
