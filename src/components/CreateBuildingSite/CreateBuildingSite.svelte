@@ -4,6 +4,7 @@
   import axios from "axios";
   import { onDestroy } from "svelte";
   import { config } from "../../config/config";
+  import { navigate } from "svelte-navigator";
 
   export let locations = [];
   export let center = [];
@@ -103,6 +104,12 @@
       };
     });
   };
+
+  const handleSaveClick = () => {
+    if ((city !== "" && street !== "", build !== "")) {
+      navigate("/create-providers");
+    }
+  };
 </script>
 
 <div class="wrapper">
@@ -134,6 +141,7 @@
       on:input={handleBuildInput}
     />
     <button class="create-btn" on:click={handleClickAdress}>Создать</button>
+    <button class="next-btn" on:click={handleSaveClick}>Сохранить</button>
   </div>
   <div class="map">
     {#if reload}
@@ -229,6 +237,19 @@
     margin-bottom: 0px;
 
     width: 169px;
+    height: 51px;
+
+    background: #79d196;
+    border-radius: 4px;
+
+    color: white;
+  }
+
+  .next-btn {
+    margin-top: auto;
+    margin-bottom: 0px;
+
+    width: 100%;
     height: 51px;
 
     background: #79d196;

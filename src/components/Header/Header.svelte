@@ -1,18 +1,4 @@
-<script>
-  import { Router, Link } from "svelte-navigator";
-</script>
-
-<div class="header">
-  <Link to="/">
-    <div class="btn-nav">Строительная площадки</div>
-  </Link>
-  <Link to="/create-providers">
-    <div class="btn-nav">Поставщики</div>
-  </Link>
-  <Link to="/create-transportation-parameters">
-    <div class="btn-nav">Параметры транспортировки</div>
-  </Link>
-</div>
+<div class="header" />
 
 <style>
   .btn-nav {
