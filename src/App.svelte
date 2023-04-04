@@ -3,6 +3,7 @@
   import CreateBuildingSite from "./components/CreateBuildingSite/CreateBuildingSite.svelte";
   import CreateProviders from "./components/CreateProviders/CreateProviders.svelte";
   import CreateTransportationParameters from "./components/CreateTransportationParameters/CreateTransportationParameters.svelte";
+  import ResultPage from "./components/ResultPage/ResultPage.svelte";
   import { Router, Route } from "svelte-navigator";
 </script>
 
@@ -17,6 +18,9 @@
       path="create-transportation-parameters"
       component={CreateTransportationParameters}
     />
+    <Route path="result">
+      <ResultPage />
+    </Route>
   </Router>
 </main>
 

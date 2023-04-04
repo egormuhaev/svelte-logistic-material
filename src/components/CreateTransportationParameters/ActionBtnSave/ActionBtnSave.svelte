@@ -10,7 +10,7 @@
   });
   const handleSaveClick = () => {
     if (flagNavigation) {
-      navigate("/create-transportation-parameters");
+      navigate("/result");
     }
   };
 

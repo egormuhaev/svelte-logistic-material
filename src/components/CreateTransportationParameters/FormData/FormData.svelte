@@ -31,6 +31,12 @@
     on:input={handleDateInput}
   />
   <h2 class="sub-title">{`Средняя температура: ${weather}`}</h2>
+  {#if weather === "-5° / -25°" || weather === "-3° / -17°" || weather === "-3° / -15°"}
+    <div class="warring">
+      Рекомендуется выбрать автобетономеситель, оборудованный модулем контроля
+      температуры
+    </div>
+  {/if}
 </div>
 
 <style>
@@ -41,6 +47,22 @@
     flex-direction: column;
     box-sizing: border-box;
     padding: 5px;
+  }
+
+  .warring {
+    box-sizing: border-box;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #d85b5b;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .input {

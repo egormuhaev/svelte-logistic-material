@@ -1,6 +1,24 @@
 import { writable } from "svelte/store";
 import {v4} from 'uuid';
 
+
+
+export const resultPageState = writable({
+    map: {
+        reload: true,
+        endPoint: [],
+        activeProviderId: [],
+    },
+    route: {
+        distance: '0 км',
+        time: '0 мин',
+        blocked: false,
+        res: false,
+    },
+})
+
+
+
 export const createBuildingSiteState  = writable({
     map: [{
             latitude: 55.753544,

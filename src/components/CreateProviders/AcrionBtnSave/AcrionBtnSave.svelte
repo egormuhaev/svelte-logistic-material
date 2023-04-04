@@ -1,4 +1,20 @@
-<button class="btn s">Сохранить</button>
+<script>
+  import { createProvidersState } from "../../../store/store";
+  import { navigate } from "svelte-navigator";
+
+  export let flagNavigation = false;
+
+  const unsubscribe = createProvidersState.subscribe((value) => {
+    flagNavigation = value.providers.length > 0;
+  });
+  const handleSaveClick = () => {
+    if (flagNavigation) {
+      navigate("/create-transportation-parameters");
+    }
+  };
+</script>
+
+<button class="btn s" on:click={handleSaveClick}>Сохранить</button>
 
 <style>
   .btn {

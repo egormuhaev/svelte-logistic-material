@@ -36,6 +36,8 @@
             }
         )
 
+        
+
         map.geoObjects.add(placemark);
         map.controls.remove('geolocationControl'); 
         map.controls.remove('searchControl'); 
