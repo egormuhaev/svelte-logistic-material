@@ -47,7 +47,6 @@ const fetchCordProvider = (city, street, build) => {
             reject(error.message);
         }
     })
-    
 }
 
 

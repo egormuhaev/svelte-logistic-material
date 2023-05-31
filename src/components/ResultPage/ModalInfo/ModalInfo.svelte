@@ -182,6 +182,7 @@
     font-size: 10px;
   }
   .modal {
+    margin-top: 200px;
     position: absolute;
     z-index: 100000;
 

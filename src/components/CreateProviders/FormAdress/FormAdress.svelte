@@ -60,7 +60,7 @@
     value={valStreet}
     on:input={handleStreetInput}
   />
-  <label for="build" class="input-label">Строение</label>
+  <label for="build" class="input-label">Дом, Строение</label>
   <input
     id="build"
     type="text"

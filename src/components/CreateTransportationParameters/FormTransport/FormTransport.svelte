@@ -36,7 +36,7 @@
 
 <div class="from-transport">
   <h1 class="main-title">Параметры транспортировки</h1>
-  <h2 class="sub-title">Адрес</h2>
+  <h2 class="sub-title">Транспорт</h2>
   <label for="height" class="input-label">Модель машины</label>
   <input
     id="height"

@@ -18,7 +18,6 @@ export const resultPageState = writable({
 })
 
 
-
 export const createBuildingSiteState  = writable({
     map: [{
             latitude: 55.753544,
@@ -146,7 +145,7 @@ export const createTransportationParametersState = writable({
             rotationSpeed: 14,
             volume: 7,
             url: 'https://kamaz.ru/upload/resize_cache/iblock/774/632_338_1/7749f8c09ebdf4c81974174ab9dcd83f.jpg'
-        }
+        },
     ]
 })
 

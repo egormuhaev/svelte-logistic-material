@@ -17,7 +17,7 @@
     length = l;
     height = h;
     width = w;
-    volume = v;
+    volume = v + v * 0.05;
   });
 
   const handleLengthInput = (event) => {
