@@ -56,7 +56,7 @@
     id="street"
     type="text"
     class="input"
-    placeholder="Напиример: ул. Новый Арбат"
+    placeholder="Например: ул. Новый Арбат"
     value={valStreet}
     on:input={handleStreetInput}
   />

@@ -26,7 +26,7 @@
   id="org-name"
   type="text"
   class="input"
-  placeholder="Например: Мостковкий бетонный завод"
+  placeholder="Например: Московкий бетонный завод"
   value={valOrgName}
   on:input={handleOrgNameInput}
 />

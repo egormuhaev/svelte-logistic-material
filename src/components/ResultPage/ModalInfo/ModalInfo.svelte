@@ -14,37 +14,6 @@
   export let time;
   export let distance;
 
-  function getSeason(dateString) {
-    switch (weather) {
-      case "-3° / -17°":
-        return 0;
-      case "-5° / -25°":
-        return 1;
-      case "-3° / -15°":
-        return 2;
-      case "2° / -5°":
-        return 3;
-      case "11° / 2°":
-        return 4;
-      case "19° / 8°":
-        return 5;
-      case "22° / 12°":
-        return 6;
-      case "24° / 14°":
-        return 7;
-      case "22° / 12°":
-        return 8;
-      case "16° / 7°":
-        return 9;
-      case "8° / 2°":
-        return 10;
-      case "1° / -3°":
-        return 11;
-      default:
-        return 12;
-    }
-  }
-
   const unsubscribe2 = createTransportationParametersState.subscribe(
     (value) => {
       volume = value.foundation.v;
@@ -86,15 +55,8 @@
         getDistVal(value.route.distance) < 70
       }`
     );
-    if (getSeason(weatherX) < 2) {
-      res =
-        getTimeVal(value.route.time) < 45 &&
-        getDistVal(value.route.distance) < 70;
-    } else {
-      res =
-        getTimeVal(value.route.time) < 90 &&
-        getDistVal(value.route.distance) < 70;
-    }
+
+    res =  getTimeVal(value.route.time) < 90 && getDistVal(value.route.distance) < 70;
   });
 
   resUp();
