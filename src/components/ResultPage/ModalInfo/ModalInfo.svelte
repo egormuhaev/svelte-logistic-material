@@ -8,7 +8,7 @@
   export let route;
   export let volume;
   export let trList;
-  export let weatherX;
+
   export let res;
   export let countCarsRase = 0;
   export let time;
@@ -18,7 +18,6 @@
     (value) => {
       volume = value.foundation.v;
       trList = [...value.transport.activeList];
-      weather = weatherX;
     }
   );
 
@@ -56,7 +55,11 @@
       }`
     );
 
-    res =  getTimeVal(value.route.time) < 90 && getDistVal(value.route.distance) < 70;
+    res =
+      getTimeVal(value.route.time) < 90 &&
+      getDistVal(value.route.distance) < 70;
+
+    console.log(res);
   });
 
   resUp();
